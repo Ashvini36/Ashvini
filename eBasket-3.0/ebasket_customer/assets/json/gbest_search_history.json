@@ -1,0 +1,85 @@
+{
+  "search_history": [
+    {
+      "id": "1",
+      "search_name": "Price Range"
+    },
+    {
+      "id": "2",
+      "search_name": "Category"
+    },
+    {
+      "id": "3",
+      "search_name": "Brand"
+    },
+    {
+      "id": "4",
+      "search_name": "Discount"
+    }
+  ],
+  "category": [
+    {
+      "id": "1",
+      "title": "Price Range",
+      "categories_item": []
+    },
+    {
+      "id": "2",
+      "title": "Category",
+      "categories_item": [
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Brand",
+      "categories_item": [
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Discount",
+      "categories_item": [
+        {
+          "id": "1",
+          "minDiscount": "5",
+          "maxDiscount": "10"
+        },
+        {
+          "id": "2",
+          "minDiscount": "10",
+          "maxDiscount": "15"
+        },
+        {
+          "id": "3",
+          "minDiscount": "15",
+          "maxDiscount": "20"
+        },
+        {
+          "id": "4",
+          "minDiscount": "20",
+          "maxDiscount": "25"
+        },
+        {
+          "id": "5",
+          "minDiscount": "25",
+          "maxDiscount": "30"
+        },
+        {
+          "id": "6",
+          "minDiscount": "30",
+          "maxDiscount": "35"
+        },
+        {
+          "id": "7",
+          "minDiscount": "35",
+          "maxDiscount": "40"
+        },
+        {
+          "id": "7",
+          "minDiscount": "40",
+          "maxDiscount": "45"
+        }
+      ]
+    }
+  ]
+}

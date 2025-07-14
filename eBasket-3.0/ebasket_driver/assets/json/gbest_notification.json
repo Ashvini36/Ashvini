@@ -1,0 +1,32 @@
+{
+  "notification": [
+    {
+      "id": "1",
+      "title": "Order is ready",
+      "description": "Please check your order",
+      "type": "order",
+      "dateTime": "2024-02-28T10:31:12.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Password Update Successful",
+      "description": "Your password update successfully",
+      "type": "password",
+      "dateTime": "2024-02-28T10:31:12.000Z"
+    },
+    {
+      "id": "3",
+      "title": "Account Setup Successful!",
+      "description": "Your account has been created",
+      "type": "account",
+      "dateTime": "2024-02-28T10:31:12.000Z"
+    },
+    {
+      "id": "4",
+      "title": "Order is ready",
+      "description": "Please check your order",
+      "type": "order",
+      "dateTime": "2024-02-20T10:31:12.000Z"
+    }
+  ]
+}
