@@ -1,0 +1,56 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:get/get.dart';
+import 'package:parkMe/constant/constant.dart';
+import 'package:parkMe/constant/show_toast_dialog.dart';
+import 'package:parkMe/model/order_model.dart';
+import 'package:parkMe/model/wallet_transaction_model.dart';
+import 'package:parkMe/utils/fire_store_utils.dart';
+
+class BookingController extends GetxController {
+  RxInt selectedTabIndex = 0.obs;
+
+  RxBool isLoading = false.obs;
+
+  confirmPayment(OrderModel orderModel) async {
+    RxDouble couponAmount = 0.0.obs;
+    ShowToastDialog.showLoader("Please wait..");
+    if (orderModel.coupon != null) {
+      if (orderModel.coupon!.id != null) {
+        if (orderModel.coupon!.type == "fix") {
+          couponAmount.value = double.parse(orderModel.coupon!.amount.toString());
+        } else {
+          couponAmount.value = double.parse(orderModel.subTotal.toString()) * double.parse(orderModel.coupon!.amount.toString()) / 100;
+        }
+      }
+    }
+    orderModel.paymentCompleted = true;
+
+    orderModel.adminCommission = Constant.adminCommission;
+    WalletTransactionModel adminCommissionWallet = WalletTransactionModel(
+        id: Constant.getUuid(),
+        amount:
+            "-${Constant.calculateAdminCommission(amount: (double.parse(orderModel.subTotal.toString()) - double.parse(couponAmount.toString())).toString(), adminCommission: orderModel.adminCommission)}",
+        createdDate: Timestamp.now(),
+        paymentType: orderModel.paymentType.toString(),
+        transactionId: orderModel.id,
+        isCredit: false,
+        userId: orderModel.parkingDetails!.userId.toString(),
+        note: "Admin commission debited");
+
+    await FireStoreUtils.setWalletTransaction(adminCommissionWallet).then((value) async {
+      if (value == true) {
+        await FireStoreUtils.updateUserWallet(
+          amount:
+              "-${Constant.calculateAdminCommission(amount: (double.parse(orderModel.subTotal.toString()) - double.parse(couponAmount.toString())).toString(), adminCommission: orderModel.adminCommission)}",
+        );
+      }
+    });
+
+    await FireStoreUtils.setOrder(orderModel).then((value) {
+      if (value == true) {
+        ShowToastDialog.closeLoader();
+        Get.back();
+      }
+    });
+  }
+}
