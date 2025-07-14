@@ -1,0 +1,104 @@
+{
+  "project_info": {
+    "project_number": "527452785533",
+    "project_id": "cabme-1b117",
+    "storage_bucket": "cabme-1b117.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527452785533:android:446e0411f48fad1ff95a14",
+        "android_client_info": {
+          "package_name": "com.cabme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527452785533-8c2nbdigv64okn46u0qqn5dtam07dhc1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cabme",
+            "certificate_hash": "c64e08460471b7064b6b88989a5a5cd5aedefb23"
+          }
+        },
+        {
+          "client_id": "527452785533-enqur579cb5ofsa6g9bou781lbo7r7sv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKRan7eD3W8Kmsh_4XoJXrlKpCxKWtDmY"
+        },
+        {
+          "current_key": "AIzaSyDZVSvULuZlEZ3HC9jiWDh-x6lLNmWXCeg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527452785533-enqur579cb5ofsa6g9bou781lbo7r7sv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "527452785533-526ib96ms6pvmi380nadalkag3csqbgd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.cabme"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527452785533:android:d04f7c04f0a38e93f95a14",
+        "android_client_info": {
+          "package_name": "com.cabme.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527452785533-aff9ligogjdvmj7ke7kle3r6p287aelm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cabme.driver",
+            "certificate_hash": "c64e08460471b7064b6b88989a5a5cd5aedefb23"
+          }
+        },
+        {
+          "client_id": "527452785533-enqur579cb5ofsa6g9bou781lbo7r7sv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKRan7eD3W8Kmsh_4XoJXrlKpCxKWtDmY"
+        },
+        {
+          "current_key": "AIzaSyDZVSvULuZlEZ3HC9jiWDh-x6lLNmWXCeg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527452785533-enqur579cb5ofsa6g9bou781lbo7r7sv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "527452785533-526ib96ms6pvmi380nadalkag3csqbgd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.cabme"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
